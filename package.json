@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "yarn": "1.x"
+  },
   "private": true,
   "scripts": {
     "client:dev": "yarn workspace client dev",
     "client:build": "yarn workspace client build",
     "server:dev": "yarn workspace server dev",
     "server:build": "yarn workspace server build",
-    "start": "node ./dist/server.js"
+    "start": "yarn client:build && yarn server:build && node ./dist/server.js"
   },
   "workspaces": [
     "src/*"
