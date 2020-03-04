@@ -13,7 +13,7 @@
     "server:dev": "yarn workspace server dev",
     "server:build": "yarn workspace server build",
     "start": "yarn client:build && yarn server:build && node ./dist/server.js",
-    "heroku-prebuild": "yarn"
+    "heroku-prebuild": "yarn install --production=false"
   },
   "workspaces": [
     "src/*"
