@@ -1,0 +1,25 @@
+{
+  "name": "yarn-workspace-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "client:dev": "yarn workspace client dev",
+    "client:build": "yarn workspace client build",
+    "server:dev": "yarn workspace server dev",
+    "server:build": "yarn workspace server build",
+    "start": "node ./dist/server.js"
+  },
+  "workspaces": [
+    "src/*"
+  ],
+  "dependencies": {
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/webpack": "^4.41.7",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
